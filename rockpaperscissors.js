@@ -1,4 +1,5 @@
-const getUserChoice = userInput => {
+const getUserChoice = (userInput) => {
+  //when you're learning JavaScript always be consistent in how you write your arrow functions! In this case, you're passing the userInput into this function, make sure you include the parenthesis with that, even if you know you don't need to!
   userInput = userInput.toLowerCase();
   return (userInput === "rock" || userInput === "scissors" || userInput === "paper" || userInput === "bomb" ? userInput : "Invalid input.");
 }
@@ -14,12 +15,12 @@ const winner = (userChoice,compChoice) => {
   return (userChoice === compChoice ? "It's a tie!"
   : userChoice === "rock " && compChoice === "scissors" ? "You win!"
   : userChoice === "paper" && compChoice === "rock" ? "You win!"
-  : userChoice === "scissors" && compChoice === "paper" ? "You Win"
+  : userChoice === "scissors" && compChoice === "paper" ? "You win!"
   : userChoice === "bomb" ? "CHEATER! YOU KILLED THE COMPUTER!!!"
   : "You lose!")
 }
 
-const play = () =>{
+const play = () => {
   const userChoice = getUserChoice("rock");
   const compChoice = getCompChoice();
   userChoice === "Invalid input." ? console.log("You can't throw that!") :
@@ -28,4 +29,6 @@ const play = () =>{
   console.log(winner(userChoice, compChoice))
 }
 
-play()
+play();
+
+//This is tight, brother!
